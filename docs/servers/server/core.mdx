@@ -1,0 +1,27 @@
+---
+title: Ядро плагина
+sidebar_position: 3
+---
+
+# Ядро плагина (botmix_core)
+
+**Роль:** сердце системы — HTTP (ripext), хранение токенов, учёт серверов/чатов, маршрутизация сообщений к модулям.
+
+**Зависимости:**  
+- [RiP (REST in Pawn)](https://hlmod.net/resources/rest-in-pawn.468/)  
+- (опц.) [MaterialAdmin Refork](https://hlmod.net/threads/v1-1-5-4-material-admin-refork-sb-1-5-4-7.38415/)
+
+**Файлы:**  
+- `/addons/sourcemod/plugins/botmix/botmix_core.smx`  
+- `/addons/sourcemod/data/botmix/core.ini` — токен для регистрации  
+- `/addons/sourcemod/data/botmix/black_list_cmd.ini` — чёрный список команд, недоступных из чата
+
+**Команды / cvars:**  
+- `sm_botmix_reg` — регистрация сервера (повторная проверка и запрос регистрации)  
+- `sm_botmix_t` — проверка регистрации сервера (включённый лог — подробный статус)  
+- `sm_botmix_received` — запрос к API на наличие команд для выполнения  
+- `sm_botmix_update` — запрос актуальных данных о зарегистрированных чатах у API  
+- `sm_botmix_resetdb` — очистка базы данных  
+- `sm_botmix_debug` *(cvar)* — `0/1`, включает отладку в логи
+
+**Особенности:** один сервер ↔ несколько чатов поддерживается. Нюансы токенов см. [«Регистрация и токены»](../../setup/).
