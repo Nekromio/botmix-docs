@@ -57,7 +57,6 @@ const config: Config = {
         {
           title: 'Документация',
           items: [
-            // с routeBasePath:'/' страницы доков теперь без префикса /docs
             { label: 'Связка с сервером', to: '/servers/css-link' },
             { label: 'Серверная часть', to: '/servers/server' },
           ],
@@ -65,6 +64,12 @@ const config: Config = {
       ],
       copyright: `© ${new Date().getFullYear()} BotMiX.`,
     },
+    /* algolia: {
+      appId: 'appId',
+      apiKey: 'apiKey',
+      indexName: 'indexName',
+      contextualSearch: true,
+    }, */
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
