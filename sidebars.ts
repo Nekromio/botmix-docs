@@ -11,7 +11,20 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Возможности',
-      items: [{ type: 'doc', id: 'features/overview' }],
+      items: [
+        { type: 'doc', id: 'features/overview' },
+        {
+          type: 'category',
+          label: 'Браки',
+          link: { type: 'doc', id: 'features/marriages/index' },
+          items: [
+            'features/marriages/commands',
+            'features/marriages/how-it-works',
+            'features/marriages/rules',
+            'features/marriages/faq',
+          ],
+        },
+      ],
     },
     {
       type: 'category',
